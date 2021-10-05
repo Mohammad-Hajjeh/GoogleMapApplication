@@ -26,10 +26,10 @@ public class MapsActivity extends AppCompatActivity {
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         ArrayList<City> cityArrayList = new ArrayList<>();
-        cityArrayList.add(new City("sydney",-34,151));
-        cityArrayList.add(new City("vannes",47.66,-2.75));
-//        cityArrayList.add(new City("Scotland",57,2));
-//        cityArrayList.add(new City("Australia",34,138));
+        cityArrayList.add(new City("sydney", -34, 151));
+        cityArrayList.add(new City("vannes", 47.66, -2.75));
+        cityArrayList.add(new City("sydney", -34, 151));
+        cityArrayList.add(new City("vannes", 47.66, -2.75));
         recyclerView = findViewById(R.id.rv_map);
         layoutManager = new LinearLayoutManager(MapsActivity.this);
         recyclerView.setLayoutManager(layoutManager);
