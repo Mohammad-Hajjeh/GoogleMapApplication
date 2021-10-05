@@ -21,7 +21,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.ArrayList;
 
 
-public class MapAdapter extends RecyclerView.Adapter<MapAdapter.MyViewHolders>/* extends FragmentActivity implements OnMapReadyCallback*/ {
+public class MapAdapter extends RecyclerView.Adapter<MapAdapter.MyViewHolders> {
     private ArrayList<City> cities;
 
 
@@ -42,10 +42,10 @@ public class MapAdapter extends RecyclerView.Adapter<MapAdapter.MyViewHolders>/*
         holder.mapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(@NonNull GoogleMap googleMap) {
-                LatLng sydney = new LatLng(cities.get(position).getLatitude(), cities.get(position).getLongitude());
-                googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in" + cities.get(position).getName()));
+                LatLng latLng = new LatLng(cities.get(position).getLatitude(), cities.get(position).getLongitude());
+                googleMap.addMarker(new MarkerOptions().position(latLng).title("Marker in" + cities.get(position).getName()));
                 CameraPosition cameraPosition = new CameraPosition.Builder()
-                        .target(sydney)
+                        .target(latLng)
                         .zoom(12.0f)
                         .build();
                 googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));

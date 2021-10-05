@@ -15,11 +15,9 @@ import java.util.ArrayList;
 
 public class MapsActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
-    RecyclerView recyclerView;
-    MapAdapter mapAdapter;
-
+    private RecyclerView recyclerView;
+    private MapAdapter mapAdapter;
     private ActivityMapsBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
