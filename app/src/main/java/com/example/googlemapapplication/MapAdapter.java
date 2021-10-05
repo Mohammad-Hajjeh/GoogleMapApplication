@@ -47,10 +47,9 @@ public class MapAdapter extends RecyclerView.Adapter<MapAdapter.MyViewHolders>/*
                 CameraPosition cameraPosition = new CameraPosition.Builder()
                         .target(sydney)
                         .zoom(12.0f)
-                        .bearing(90)
-                        .tilt(30)
                         .build();
                 googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                googleMap.getUiSettings().setAllGesturesEnabled(false);
 
 
             }
